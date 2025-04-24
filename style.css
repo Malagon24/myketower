@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    padding-top: 100px;
+  }
+
+  .navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1f2937;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .contenido-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .enlace {
+    color: white;
+    text-decoration: none;
+  }
+
+  .enlace:hover {
+    color: #facc15;
+  }
+
+  .logo img {
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .seccion-hero {
+    position: relative;
+    height: 100vh;
+    background-image: url("images/Mykeeeeeeee (1).jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  .contenido-hero {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    animation: aparecer 2s ease-in-out;
+  }
+
+  .contenido-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .contenido-hero p {
+    font-size: 1rem;
+    max-width: 900px;
+    line-height: 1.8;
+    text-align: justify;
+    text-indent: 2em;
+  }
+
+  .boton {
+    margin-top: 1.5rem;
+    background-color: #facc15;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .boton:hover {
+    background-color: #fde047;
+  }
+
+  .seccion {
+    padding: 5rem 1.5rem;
+    background-color: #111827;
+    text-align: center;
+  }
+
+  .seccion h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+
+  .grid-3 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  video {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    object-fit: cover;
+    background-color: black;
+    display: block;
+    margin-inline: 50px;
+  }
+
+  .item-tienda {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+  }
+
+  .item-tienda:hover {
+    transform: scale(1.05);
+  }
+
+  .item-tienda img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 1rem;
+  }
+
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .red-social {
+    font-size: 2.5rem;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .red-social:hover {
+    color: #facc15;
+    transform: scale(1.2);
+  }
+
+  footer {
+    background-color: #1f2937;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .contenido-hero h1 {
+      font-size: 2rem;
+    }
+    .contenido-hero p {
+      font-size: 1rem;
+    }
+    .contenido-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
